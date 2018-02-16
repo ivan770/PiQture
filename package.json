@@ -1,0 +1,11 @@
+{
+  "name": "piqture",
+  "author": "ivan770",
+  "productName": "PiQture",
+  "version": "0.8",
+  "main": "main.js",
+  "devDependencies": {
+    "electron": "^1.8.2",
+    "electron-packager": "^8.1.0"
+  }
+}
