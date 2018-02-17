@@ -24,3 +24,7 @@ By default, PiQture handle "piqture://" url's. If you try to visit this url in b
 ### Global shortcut
 
 PiQture will take Ctrl(Cmd)+Alt+S shortcut to take quick screenshots. Even if PiQture is minimized to tray, this shortcut will work.
+
+### License
+
+MIT
