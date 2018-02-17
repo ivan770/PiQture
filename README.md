@@ -20,3 +20,7 @@ PiQture doesn't require installation, just run piqture.exe file and you're done!
 ### URL Handler
 
 By default, PiQture handle "piqture://" url's. If you try to visit this url in browser, PiQture will open up in windowed mode.
+
+### Global shortcut
+
+PiQture will take Ctrl(Cmd)+Alt+S shortcut to take quick screenshots. Even if PiQture is minimized to tray, this shortcut will work.
