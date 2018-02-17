@@ -17,6 +17,7 @@
 
 
 </div>
+<script src="js/time.js"></script>
 <script>
 const electron = require('electron')
 const desktopCapturer = electron.desktopCapturer
@@ -38,7 +39,7 @@ const ipc = require('electron').ipcRenderer
 screenshot.addEventListener('click', function (event) {
   ipc.send('save-dialog')
   ipc.on('saved-file', function (event, pathFile) {
-  if (!pathFile) pathFile = 'No path'
+  if (!pathFile) pathFile = 'Clipboard'
   screenshotMsg.placeholder = `Path selected: ${pathFile}`
   start(pathFile)
 })
@@ -96,7 +97,7 @@ function exit(){
 }
 
 ipc.on('shortcut-screenshot', function (event) {
-start(path.join(os.homedir(), 'screenshot.png'))
+start(path.join(os.homedir(), piqture_time()+".png"))
 })
 
 document.addEventListener("keydown", function (e) {
