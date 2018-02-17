@@ -1,199 +1,14 @@
 <head>
 <title>PiQture</title>
+<link href="style.css" rel="stylesheet" type="text/css">
 </head>
-<style>
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-size: 10px;
-}
 
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
-body, ul, li {
-  margin: 0;
-  padding: 0;
-  -webkit-app-region: drag
-}
-
-li {
-  list-style: none;
-}
-
-p, h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-input {
-  border-style: none;
-  background: transparent;
-  outline: none;
-}
-
-button {
-  padding: 0;
-  background: none;
-  border: none;
-  outline: none;
-}
-
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  background-image: radial-gradient(circle at 0% 0%, #373b52, #252736 51%, #1d1e26);
-}
-
-h1.demo {
-  text-align: center;
-  font-size: 2.4rem;
-  font-weight: normal;
-  margin-bottom: 1rem;
-  color: #f5f6ff;
-}
-
-a.demo {
-  text-align: center;
-  font-size: 1.6rem;
-  font-weight: normal;
-  color: rgba(202, 205, 239, 0.8);
-  margin-bottom: 3rem;
-}
-
-.demo-flex-spacer {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-.container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100vh;
-  max-width: 1600px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
-@-webkit-keyframes gradient {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 100% 0;
-  }
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 100% 0;
-  }
-}
-.webflow-style-input {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-  border-radius: 2px;
-  padding: 1.4rem 2rem 1.6rem;
-  background: rgba(57, 63, 84, 0.8);
-  -webkit-app-region: no-drag;
-}
-.webflow-style-input:after {
-  content: "";
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  z-index: 999;
-  height: 2px;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
-  background-position: 0% 0%;
-  background: -webkit-gradient(linear, left top, right top, from(#B294FF), color-stop(#57E6E6), color-stop(#FEFFB8), color-stop(#57E6E6), color-stop(#B294FF), to(#57E6E6));
-  background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
-  background-size: 500% auto;
-  -webkit-animation: gradient 3s linear infinite;
-          animation: gradient 3s linear infinite;
-}
-
-.webflow-style-input input {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  color: #BFD2FF;
-  font-size: 1.8rem;
-  line-height: 2.4rem;
-  vertical-align: middle;
-}
-.webflow-style-input input::-webkit-input-placeholder {
-  color: #7881A1;
-}
-
-.webflow-style-input button {
-  color: #7881A1;
-  font-size: 2.4rem;
-  line-height: 2.4rem;
-  vertical-align: middle;
-  -webkit-transition: color .25s;
-  transition: color .25s;
-}
-.webflow-style-input button:hover {
-  color: #BFD2FF;
-}
-
-#close {
-  color: white;
-  opacity: 0.7;
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 12px;
-  text-decoration: none;
-  -webkit-app-region: no-drag;
-}
-
-a {
-  color:#FFF;
-  -webkit-app-region: no-drag;
-  word-wrap: normal;
-}
-
-@keyframes slidebg {
-  to {
-    background-position:20vw;
-  }
-}
-</style>
 <div class="container">
 
   <div class="demo-flex-spacer"></div>
 
   <div class="webflow-style-input">
-    <input class="" type="text" placeholder="PiQture 0.8" id="screenshot-path"></input>
+    <input class="" type="text" placeholder="PiQture 0.9" id="screenshot-path"></input>
     <button id="screenshot"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABTSURBVDhPY6A14AdiHQiTPNAPxG+B2AjMIwNwAfEBIB4chuwHYtoZkgfEq4jAW4D4PxCDDDEAYjig2ABiAEXhQLFmsqORIs0gQHFSpjgzEQAMDABVMCWHZbRzNwAAAABJRU5ErkJggg=="></button>
   </div>
 
@@ -284,35 +99,10 @@ ipc.on('shortcut-screenshot', function (event) {
 start(path.join(os.homedir(), 'screenshot.png'))
 })
 
-let trayIcon = new Tray(path.join(__dirname, 'assets/icons/icon.png'))
-
-         const trayMenuTemplate = [
-            {
-               label: 'PiQture',
-               enabled: false
-            },
-
-            {
-               label: 'Open PiQture',
-               click: function () {
-                  show()
-               }
-            },
-
-            {
-               label: 'Exit',
-               click: function () {
-                  exit()
-               }
-            }
-         ]
-
-         let trayMenu = Menu.buildFromTemplate(trayMenuTemplate)
-         trayIcon.setContextMenu(trayMenu)
-
-         document.addEventListener("keydown", function (e) {
-         		if (e.which === 123) {
-         			ipc.send('developer')
-         		}
-         	});
+document.addEventListener("keydown", function (e) {
+    if (e.which === 123) {
+        ipc.send('developer')
+      }
+    });
 </script>
+<script src="js/tray.js"></script>
