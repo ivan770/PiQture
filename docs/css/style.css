@@ -1,0 +1,206 @@
+@import url('//fonts.googleapis.com/css?family=Roboto:500');
+
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+
+html
+{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+*, *:before, *:after
+{
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body, ul, li
+{
+    margin: 0;
+    padding: 0;
+}
+
+li
+{
+    list-style: none;
+}
+
+p, h1, h2, h3, h4, h5, h6
+{
+    margin-top: 0;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+input
+{
+    border-style: none;
+    background: transparent;
+    outline: none;
+}
+
+button
+{
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+body
+{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-image: radial-gradient(circle at 0% 0%, #373b52, #252736 51%, #1d1e26);
+}
+
+h1.demo
+{
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    color: #f5f6ff;
+}
+
+a.demo
+{
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: normal;
+    color: rgba(202, 205, 239, 0.8);
+    margin-bottom: 3rem;
+}
+
+.demo-flex-spacer
+{
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  max-width: 1600px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@-webkit-keyframes gradient{
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes gradient{
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.webflow-style-input {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 2px;
+  padding: 1.4rem 2rem 1.6rem;
+  background: rgba(57, 63, 84, 0.8);
+}
+
+.webflow-style-input:after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 999;
+  height: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-position: 0% 0%;
+  background: -webkit-gradient(linear, left top, right top, from(#B294FF), color-stop(#57E6E6), color-stop(#FEFFB8), color-stop(#57E6E6), color-stop(#B294FF), to(#57E6E6));
+  background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
+  background-size: 500% auto;
+  -webkit-animation: gradient 3s linear infinite;
+          animation: gradient 3s linear infinite;
+}
+
+.webflow-style-input input
+{
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    color: #BFD2FF;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    vertical-align: middle;
+}
+
+.webflow-style-input input::-webkit-input-placeholder
+{
+    color: #7881A1;
+}
+
+.webflow-style-input button
+{
+    color: #7881A1;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    vertical-align: middle;
+    -webkit-transition: color .25s;
+    transition: color .25s;
+}
+
+.webflow-style-input button:hover
+{
+    color: #BFD2FF;
+}
+
+.btn {
+  background: #373b52;
+  background-image: -webkit-linear-gradient(top, #373b52, #1d1e26);
+  background-image: -moz-linear-gradient(top, #373b52, #1d1e26);
+  background-image: -ms-linear-gradient(top, #373b52, #1d1e26);
+  background-image: -o-linear-gradient(top, #373b52, #1d1e26);
+  background-image: linear-gradient(to bottom, #373b52, #1d1e26);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 30px 10px 30px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #252736;
+  text-decoration: none;
+}

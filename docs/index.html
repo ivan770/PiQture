@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>PiQture</title>
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="demo-flex-spacer"></div>
+            <div class="webflow-style-input">
+                <input class="" value="The power of simplicity and design" id="mainInput" readonly>
+            </input>
+        </div>
+        <script>
+        var text = ["Forget opening Paint to save screenshot", "Global shortcuts", "Native, low-usage of CPU", "Cross-platform", "'Take a PiQture' feature", "Open-source"];
+var counter = 0;
+var elem = document.getElementById("mainInput");
+setInterval(change, 2000);
+
+function change() {
+    end = 0;
+    if(end != 1){
+  elem.value = text[counter];
+  counter++;
+  if (counter > text.length) {
+    end = 1;
+      elem.value = "Simple, but powerful. PiQture.";
+  }
+    }
+}
+        </script>
+        <div class="demo-flex-spacer">
+            <section style="padding: 64px 0;
+  text-align: center;">
+                <button class="btn" onclick="window.location.href='https://github.com/ivan770/PiQture/releases'">
+                    Open on GitHub
+</button>
+            </section>
+        </div>
+        <h1 class="demo">Screenshots, but better.</h1>
+        <a class="demo" href="piqture://">Open PiQture</a>
+    </div>
+</body>
