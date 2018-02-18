@@ -31,7 +31,7 @@ let trayIcon = new Tray(path.join(__dirname, 'assets/icons/icon.png'))
                      ipc.send('save-dialog')
                      ipc.on('saved-file', function (event, pathFile) {
                      if (!pathFile) pathFile = 'Clipboard'
-                     screenshotMsg.placeholder = `Path selected: ${pathFile}`
+                     screenshotMsg.value = `Path selected: ${pathFile}`
                      start(pathFile)
                    })
                    }

@@ -8,7 +8,7 @@
   <div class="demo-flex-spacer"></div>
 
   <div class="webflow-style-input">
-    <input class="" type="text" placeholder="PiQture 0.10" id="screenshot-path"></input>
+    <input class="" type="text" placeholder="PiQture 0.10" id="screenshot-path" readonly></input>
     <button id="screenshot"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABTSURBVDhPY6A14AdiHQiTPNAPxG+B2AjMIwNwAfEBIB4chuwHYtoZkgfEq4jAW4D4PxCDDDEAYjig2ABiAEXhQLFmsqORIs0gQHFSpjgzEQAMDABVMCWHZbRzNwAAAABJRU5ErkJggg=="></button>
   </div>
 
@@ -40,7 +40,7 @@ screenshot.addEventListener('click', function (event) {
   ipc.send('save-dialog')
   ipc.on('saved-file', function (event, pathFile) {
   if (!pathFile) pathFile = 'Clipboard'
-  screenshotMsg.placeholder = `Path selected: ${pathFile}`
+  screenshotMsg.value = `Path selected: ${pathFile}`
   start(pathFile)
 })
 })
