@@ -2,7 +2,7 @@
   "name": "piqture",
   "author": "ivan770",
   "productName": "PiQture",
-  "version": "0.10",
+  "version": "0.10.0",
   "main": "main.js",
   "devDependencies": {
     "electron": "^1.8.2",
