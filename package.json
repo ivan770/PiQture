@@ -6,6 +6,6 @@
   "main": "main.js",
   "devDependencies": {
     "electron": "^1.8.2",
-    "electron-packager": "^8.1.0"
+    "electron-packager": "^11.0.1"
   }
 }
