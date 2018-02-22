@@ -37,18 +37,14 @@ const screenshot = document.getElementById('screenshot')
 const screenshotMsg = document.getElementById('screenshot-path')
 const windowSecond = remote.getCurrentWindow()
 const ipc = require('electron').ipcRenderer
+const Store = require('./js/store.js');
 
-fs.readFile(path.join(__dirname, '.', 'config.json'), 'utf-8', (err, data) => {
-        if(err){
-            snackbar()
-            const configUsage = false
-            return;
-        }
-
-        console.log("Config : " + data);
-        const configUsage = true
-        configuration = JSON.parse(data);
-    });
+const store = new Store({
+  configName: 'user-preferences',
+  defaults: {
+    developerKey: 123
+  }
+});
 
 screenshot.addEventListener('click', function (event) {
   ipc.send('save-dialog')
@@ -85,7 +81,7 @@ start(path.join(os.homedir(), piqture_time()+".png"))
 })
 
 document.addEventListener("keydown", function (e) {
-    if (e.which === configuration.developerKey) {
+    if (e.which === store.get('developerKey')) {
         ipc.send('developer')
       }
     });
