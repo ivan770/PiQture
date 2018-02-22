@@ -15,6 +15,8 @@
   <div class="demo-flex-spacer"></div>
   <a id="close" onclick="hide()" title="PiQture will hide automatically after capturing">Hide PiQture to tray</a>
 
+  <div id="snackbar">Config reading error</div>
+
 
 </div>
 <script src="js/time.js"></script>
@@ -35,6 +37,18 @@ const screenshot = document.getElementById('screenshot')
 const screenshotMsg = document.getElementById('screenshot-path')
 const windowSecond = remote.getCurrentWindow()
 const ipc = require('electron').ipcRenderer
+
+fs.readFile(path.join(__dirname, '.', 'config.json'), 'utf-8', (err, data) => {
+        if(err){
+            snackbar()
+            const configUsage = false
+            return;
+        }
+
+        console.log("Config : " + data);
+        const configUsage = true
+        configuration = JSON.parse(data);
+    });
 
 screenshot.addEventListener('click', function (event) {
   ipc.send('save-dialog')
@@ -71,10 +85,16 @@ start(path.join(os.homedir(), piqture_time()+".png"))
 })
 
 document.addEventListener("keydown", function (e) {
-    if (e.which === 123) {
+    if (e.which === configuration.developerKey) {
         ipc.send('developer')
       }
     });
+
+    function snackbar() {
+        var x = document.getElementById("snackbar")
+        x.className = "show";
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    }
 </script>
 <script src="js/start.js"></script>
 <script src="js/tray.js"></script>
