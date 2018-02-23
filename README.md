@@ -3,6 +3,8 @@
 
 PiQture is Electron-based screenshot tool, which allows you to use global shortcuts, cross-platform usage and high-quality capture
 
+![Screenshot](https://ivan770.github.io/PiQture/screenshots/screen_1.png)
+
 # Now open-source
 
 Now, PiQture is available for everyone. Everyone can review and edit the code. Let's make PiQture better!
