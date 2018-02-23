@@ -172,6 +172,18 @@ a.demo {
   -webkit-app-region: no-drag;
 }
 
+#options {
+  color: white;
+  opacity: 0.7;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  text-decoration: none;
+  -webkit-app-region: no-drag;
+}
+
 a {
   color:#FFF;
   -webkit-app-region: no-drag;
