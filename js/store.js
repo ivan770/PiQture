@@ -26,6 +26,7 @@ class Store {
     // Also if we used an async API and our app was quit before the asynchronous write had a chance to complete,
     // we might lose that data. Note that in a real app, we would try/catch this.
     fs.writeFileSync(this.path, JSON.stringify(this.data));
+    console.log("Settings changed!")
   }
 }
 

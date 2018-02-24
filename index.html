@@ -14,7 +14,6 @@
 
   <div class="demo-flex-spacer"></div>
   <a id="close" onclick="hide()" title="PiQture will hide automatically after capturing">Hide PiQture to tray</a>
-  <a id="options" onclick="window.open('options.html', 'github', 'resizable')">Options</a>
 
   <!-- <div id="snackbar">Config reading error</div> -->
 
@@ -40,8 +39,8 @@ const windowSecond = remote.getCurrentWindow()
 const ipc = require('electron').ipcRenderer
 const Store = require('./js/store.js');
 
-const store = new Store({
-  configName: 'user-preferences',
+const settings = new Store({
+  configName: 'piqturesettings',
   defaults: {
     developerKey: 123
   }
@@ -82,7 +81,7 @@ start(path.join(os.homedir(), piqture_time()+".png"))
 })
 
 document.addEventListener("keydown", function (e) {
-    if (e.which === store.get('developerKey')) {
+    if (e.which === settings.get('developerKey')) {
         ipc.send('developer')
       }
 });
