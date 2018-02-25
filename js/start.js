@@ -1,6 +1,6 @@
 function start(pathFile){
   windowSecond.hide();
-  setTimeout(func, 1000);
+  setTimeout(func, settings.get('timeOutCapture'));
   function func(){
   screenshotMsg.value = 'Gathering screens...'
   const thumbSize = determineScreenShotSize()
