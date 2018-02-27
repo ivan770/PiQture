@@ -8,6 +8,7 @@ function getSource(){
     var x = document.getElementById("screenSelector");
     var option = document.createElement("option");
     option.text = source.name + "(" + source.id + ")";
+    option.id = source.name
     x.add(option);
   })
 })
