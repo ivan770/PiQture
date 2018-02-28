@@ -5,11 +5,8 @@ function getSource(){
     if (error) return console.log(error)
 
     sourcesSelect.forEach(function (source) {
-    var x = document.getElementById("screenSelector");
-    var option = document.createElement("option");
-    option.text = source.name + "(" + source.id + ")";
-    option.id = source.name
-    x.add(option);
+    var x = document.getElementById("screenshot-path");
+    x.value = "Source: " + source.name + "(" + source.id + ")"
   })
 })
 }
