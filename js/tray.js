@@ -5,7 +5,9 @@ let trayIcon = new Tray(path.join(__dirname, 'assets/icons/icon.png'))
                label: 'PiQture',
                enabled: false
             },
-
+            {
+              type: 'separator'
+            },
             {
                label: 'Open PiQture',
                click: function () {
