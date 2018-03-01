@@ -17,7 +17,7 @@ PiQture uses a number of open source projects to work properly:
 
 ### Installation
 
-Currently, PiQture supports only Windows x64, but you can build app using any Electron packaging tool for your platform.
+Currently, PiQture supports Windows and Linux x64, but you can build app using any Electron packaging tool for your platform.
 PiQture doesn't require installation, just run piqture.exe file and you're done!
 
 ### URL Handler
