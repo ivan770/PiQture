@@ -6,7 +6,8 @@ function getSource(){
 
     sourcesSelect.forEach(function (source) {
     var x = document.getElementById("screenshot-path");
-    x.value = "Source: " + source.name + "(" + source.id + ")"
+    var resolution = electronScreen.getPrimaryDisplay().size
+    x.value = "Source: " + source.name + "(" + resolution.width + "x" + resolution.height + ")"
   })
 })
 }
