@@ -50,15 +50,19 @@ const settings = new Store({
   configName: 'piqturesettings',
   defaults: {
     developerKey: 123,
-    timeOutCapture: 1000
+    timeOutCapture: 1000,
+    nativeCapture: true
   }
 });
+
+nativeCaptureValue.checked = settings.get("nativeCapture")
 
 screenshot.addEventListener('click', function (event) {
   ipc.send('save-dialog')
   ipc.on('saved-file', function (event, pathFile) {
   if (!pathFile) pathFile = 'Clipboard'
   screenshotMsg.value = `Path selected: ${pathFile}`
+  settings.set("nativeCapture", nativeCaptureValue.checked)
   start(pathFile)
 })
 })
