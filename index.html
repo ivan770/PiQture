@@ -8,9 +8,15 @@
   <div class="demo-flex-spacer"></div>
 
   <div class="webflow-style-input">
-    <input class="" type="text" placeholder="PiQture 0.11" id="screenshot-path" readonly></input>
+    <input class="" type="text" placeholder="PiQture 0.12" id="screenshot-path" readonly></input>
     <button id="screenshot"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABTSURBVDhPY6A14AdiHQiTPNAPxG+B2AjMIwNwAfEBIB4chuwHYtoZkgfEq4jAW4D4PxCDDDEAYjig2ABiAEXhQLFmsqORIs0gQHFSpjgzEQAMDABVMCWHZbRzNwAAAABJRU5ErkJggg=="></button>
   </div>
+  <div class="control-group">
+    <label class="control control-checkbox">
+        <input type="checkbox" checked="checked"/>
+        <div class="control_indicator" onmouseover="screenshotMsg.value = 'Native capture(full resolution)'" onmouseout="getSource()"></div>
+    </label>
+    	</div>
 
   <div class="demo-flex-spacer"></div>
   <a id="close" onclick="hide()" title="PiQture will hide automatically after capturing">Hide PiQture to tray</a>
@@ -62,6 +68,10 @@ function determineScreenShotSize () {
   return {
     width: maxDimension * window.devicePixelRatio,
     height: maxDimension * window.devicePixelRatio
+    /* native capture
+    width: screenSize.width * window.devicePixelRatio,
+    height: screenSize.height * window.devicePixelRatio
+    */
   }
 }
 
@@ -88,7 +98,7 @@ document.addEventListener("keydown", function (e) {
 });
 </script>
 <script src="js/getSource.js"></script>
-<script src="js/displayDiagnostics.js"></script>
+<script src="js/diagnostics.js"></script>
 <script src="js/snackbar.js"></script>
 <script src="js/start.js"></script>
 <script src="js/tray.js"></script>
