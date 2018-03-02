@@ -13,7 +13,7 @@
   </div>
   <div class="control-group">
     <label class="control control-checkbox">
-        <input type="checkbox" checked="checked"/>
+        <input type="checkbox" checked="checked" id="nativeCaptureValue"/>
         <div class="control_indicator" onmouseover="screenshotMsg.value = 'Native capture(full resolution)'" onmouseout="getSource()"></div>
     </label>
     	</div>
@@ -41,6 +41,7 @@ const path = require('path')
 
 const screenshot = document.getElementById('screenshot')
 const screenshotMsg = document.getElementById('screenshot-path')
+const nativeCaptureValue = document.getElementById('nativeCaptureValue')
 const windowSecond = remote.getCurrentWindow()
 const ipc = require('electron').ipcRenderer
 const Store = require('./js/store.js');
@@ -65,13 +66,16 @@ screenshot.addEventListener('click', function (event) {
 function determineScreenShotSize () {
   const screenSize = electronScreen.getPrimaryDisplay().workAreaSize
   const maxDimension = Math.max(screenSize.width, screenSize.height)
-  return {
-    width: maxDimension * window.devicePixelRatio,
-    height: maxDimension * window.devicePixelRatio
-    /* native capture
-    width: screenSize.width * window.devicePixelRatio,
-    height: screenSize.height * window.devicePixelRatio
-    */
+  if(nativeCaptureValue.checked == true){
+    return {
+      width: maxDimension * window.devicePixelRatio,
+      height: maxDimension * window.devicePixelRatio
+    }
+  }else{
+    return {
+      width: screenSize.width * window.devicePixelRatio,
+      height: screenSize.height * window.devicePixelRatio
+    }
   }
 }
 
