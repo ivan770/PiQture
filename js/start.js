@@ -14,8 +14,11 @@ function start(pathFile){
 
         fs.writeFile(screenshotPath, source.thumbnail.toPng(), function (error) {
           if (error) return console.log(error)
-          // shell.openExternal('file://' + screenshotPath) -- Open photo
-          shell.showItemInFolder('file://' + screenshotPath)
+          if(settings.get("openPhoto") == true){
+            shell.openExternal('file://' + screenshotPath)
+          }else{
+            shell.showItemInFolder('file://' + screenshotPath)
+          }
           const message = `Saved screenshot to: ${screenshotPath}`
           screenshotMsg.value = message
           clipboard.clear();
