@@ -2,13 +2,11 @@
   "name": "piqture",
   "author": "ivan770",
   "productName": "PiQture",
-  "version": "0.12.1",
+  "version": "0.13.0",
   "main": "main.js",
   "devDependencies": {
     "electron": "^1.8.2",
     "electron-packager": "^11.0.1"
   },
-  "dependencies": {
-    "commander": "^2.15.0"
-  }
+  "dependencies": {}
 }
