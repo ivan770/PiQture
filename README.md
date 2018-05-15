@@ -1,5 +1,5 @@
 # PiQture
-[![Build Status](https://travis-ci.org/ivan770/PiQture.svg?branch=master)](https://travis-ci.org/ivan770/PiQture) [![devDependencies Status](https://david-dm.org/ivan770/PiQture/dev-status.svg)](https://david-dm.org/ivan770/PiQture?type=dev)
+[![Build Status](https://travis-ci.org/ivan770/PiQture.svg?branch=master)](https://travis-ci.org/ivan770/PiQture)
 
 PiQture is Electron-based screenshot tool, which allows you to use global shortcuts, cross-platform usage and high-quality capture
 
